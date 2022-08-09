@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(244, 10, 158);
+}
+
+#td{
+    position:absolute;
+    font-size: 250px;
+    opacity: 0.4;
+    margin-top: 5rem;
+    margin-left: 30rem;
+}
+
+#items{
+    position:absolute;
+    margin-top: 30rem;
+    margin-left: 40rem;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+#vehicle{
+    margin: 0.8rem 0;
+    box-shadow: 2px solid white;
+}
+
+#title{
+    text-align: center;
+    width: 20vw;
+    margin-left: -3rem;
+    font-size: 24px;
+    padding: .3rem 0;
+    margin-top: 1rem;
+    opacity: .7;
+    border-radius: 50px;
+}
