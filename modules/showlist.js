@@ -6,10 +6,15 @@ const showList = () => {
   task.map((tasks) => {
     const { discription, completed, index } = tasks;
     str += `
-      <label>${index}</label><br>
+    <input type="checkbox" name="check" id="check">
       <label>${discription}</label><br>
-      <label>${completed}</label><br>
+      <div id="dot">
       <hr>
+      <hr>
+      <hr>
+      </div>
+      <hr>
+      
     `;
     return str;
   });

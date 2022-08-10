@@ -11,24 +11,22 @@ body {
 }
 
 #items {
-  background-color: beige;
+  background-color: #d3d3d3;
   border-radius: 1rem;
-  margin-left: -3rem;
-  padding-left: 4rem;
+  padding-left: 3rem;
 }
 
-#vehicle {
-  margin: 0.8rem 0;
-  box-shadow: 2px solid white;
+#check {
+  margin-top: 2rem;
+  margin-left: -1rem;
 }
 
 #title {
   text-align: center;
-  width: 20vw;
-  margin-left: -3rem;
+  width: 30vw;
   font-size: 24px;
   padding: 0.3rem 0;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   opacity: 0.7;
   border-radius: 50px;
 }
@@ -38,11 +36,25 @@ body {
   flex-direction: column;
   position: absolute;
   margin-top: 20rem;
-  margin-left: 40rem;
+  margin-left: 33rem;
   font-size: 24px;
   line-height: 32px;
 }
 
 hr {
-  width: 10rem;
+  width: 100%;
+  margin-left: -2rem;
+}
+#dot {
+  margin-left: 25rem;
+  margin-top: -1rem;
+}
+
+#dot hr {
+  display: flex;
+  flex-direction: column;
+  width: 0.1rem;
+  margin-top: -0.6rem;
+  height: 2px;
+  background-color: rgb(132, 135, 138);
 }
