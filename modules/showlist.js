@@ -4,7 +4,7 @@ import task from "./Object.js";
 const showList = () => {
   let str = "";
   task.map((tasks) => {
-    const { discription, completed, index } = tasks;
+    const { discription } = tasks;
     str += `
     <input type="checkbox" name="check" id="check">
       <label>${discription}</label><br>
