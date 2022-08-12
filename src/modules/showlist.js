@@ -1,31 +1,63 @@
-import dataa from "./Elements.js";
-import task from "./Object.js";
+import {dataa} from "./Elements.js";
+import removeList from './Removelist.js'
+
+let task = [];
 
 const showList = () => {
-  let str = "";
-  let bookArr = [];
   if (localStorage.getItem("str") === null) {
-    localStorage.setItem("str", JSON.stringify(bookArr));
+    localStorage.setItem("str", JSON.stringify(task));
   } else {
-    const bookArrStr = localStorage.getItem("str");
-    bookArr = JSON.parse(bookArrStr);
+    const taskStr = localStorage.getItem("str");
+    task = JSON.parse(taskStr);
   }
-  bookArr.map((tasks) => {
-    str += `
-    <input type="checkbox" name="check" id="check">
-      <label>${tasks.discription}</label><br>
-      <div id="dot">
-      <hr>
-      <hr>
-      <hr>
-      </div>
-      <hr>
-    `;
-    return str;
+  task.map((tasks) => {
+    const deleteList = document.createElement('i');
+    deleteList.className = 'fa fa-trash-alt';
+    deleteList.style.display = 'none';
+    const checkbox = document.createElement('input');
+    checkbox.setAttribute('id', "check");
+    checkbox.type='checkbox';
+    const label = document.createElement('label');
+    label.innerText = `${tasks.description}`;
+    const dot = document.createElement('div');
+    dot.setAttribute('id', 'dot');
+    const hr1 = document.createElement('hr');
+    const hr2 = document.createElement('hr');
+    const hr3 = document.createElement('hr');
+    const mHr = document.createElement('hr');
+    label.addEventListener('contextmenu', (e) =>{
+      e.preventDefault();
+      label.style.textDecoration = 'line-through';
+      checkbox.checked = true;
+    })
+    deleteList.addEventListener('click', () => {
+      removeList(tasks.index);
+
+    })
+    label.addEventListener('click', () => {
+      removeList(tasks.index);
+
+    })
+    dot.addEventListener('click', () =>{
+      deleteList.style.display = 'block';
+      dot.style.display = 'none';
+    })
+    dataa.appendChild(checkbox);
+    dataa.appendChild(label);
+    dataa.appendChild(dot);
+    dot.appendChild(hr1);
+    dot.appendChild(hr2);
+    dot.appendChild(hr3);
+    dataa.appendChild(deleteList);
+    dataa.appendChild(mHr);
+    
+
   });
 
  
-  dataa.innerHTML = str;
 };
+
+
+
 
 export default showList;

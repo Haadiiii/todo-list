@@ -12,14 +12,16 @@ body {
 }
 
 #items {
+    position: absolute;
     background-color: white;
     border-radius: 1rem;
-    padding-left: 3rem;
+    padding-left: 4rem;
     box-sizing: border-box;
     box-shadow: 50rem black;
+    margin-top: 9rem;
 }
 
-#check {
+.check {
     margin-top: 2rem;
     margin-left: -1rem;
 }
@@ -29,7 +31,7 @@ body {
     width: 30vw;
     font-size: 24px;
     padding: 0.3rem 0;
-    margin-top: 0.5rem;
+    margin-top: 6rem;
     opacity: 0.7;
     border-radius: 50px;
 }
@@ -54,6 +56,12 @@ hr {
     margin-top: -1rem;
 }
 
+.fa-trash-alt{
+    margin-left: 22rem;
+    margin-top: -1rem;
+    color: rgb(255, 77, 0);
+}
+
 #dot hr {
     display: flex;
     flex-direction: column;
@@ -61,4 +69,16 @@ hr {
     margin-top: -0.6rem;
     height: 2px;
     background-color: rgb(132, 135, 138);
+}
+
+.inst{
+    position: absolute;
+    display: flex;
+    margin-top: 20rem;
+    margin-left: 40rem;
+    width: 15vw;
+    opacity: 0.7;
+    font-size: 17px;
+    font-weight: bolder;
+    color: #e25ef9;
 }
