@@ -1,4 +1,4 @@
-import { dataa, button  } from "./Elements.js";
+import { dataa, button } from "./Elements.js";
 
 let task = [];
 
@@ -76,7 +76,7 @@ const showList = () => {
       let str = "";
       const taskStr = localStorage.getItem("str");
       task = JSON.parse(taskStr);
-      task.splice(id, 1);
+      task.splice(id,1);
       task.forEach((el, index) => {
         el.index = index;
       });
