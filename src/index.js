@@ -1,17 +1,12 @@
 import "./index.css";
 import showList from "./modules/showlist.js";
-import {title} from "./modules/Elements.js";
-import addItems from './modules/Addlist.js'
+import { title } from "./modules/Elements.js";
+import addItems from "./modules/Addlist.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-
-  title.addEventListener('keydown',(e) => {
-    if (e.key === "Enter") {
-      addItems();
-    }
-
-  })
-
-  showList();
+title.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    addItems();
+  }
 });
 
+showList();
