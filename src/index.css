@@ -1,61 +1,109 @@
 body {
-    background-color: rgb(248, 136, 207);
+  background-color: azure;
 }
 
 #td {
-    position: absolute;
-    font-size: 250px;
-    opacity: 0.4;
-    margin-top: 2rem;
-    margin-left: 30rem;
+  position: absolute;
+  font-size: 250px;
+  opacity: 0.4;
+  margin-top: 2rem;
+  margin-left: 30rem;
+  color: rgb(249, 175, 249);
 }
 
 #items {
-    background-color: #d3d3d3;
-    border-radius: 1rem;
-    padding-left: 3rem;
+  position: absolute;
+  background-color: white;
+  border-radius: 2rem;
+  padding-left: 4rem;
+  box-sizing: border-box;
+  box-shadow: 50rem black;
+  margin-top: 10rem;
+  width: 100%;
+  padding-top: 0.5rem;
 }
 
-#check {
-    margin-top: 2rem;
-    margin-left: -1rem;
+.check {
+  margin-top: 3rem;
+  margin-left: -1rem;
 }
 
 #title {
-    text-align: center;
-    width: 30vw;
-    font-size: 24px;
-    padding: 0.3rem 0;
-    margin-top: 0.5rem;
-    opacity: 0.7;
-    border-radius: 50px;
+  text-align: center;
+  width: 30vw;
+  font-size: 24px;
+  padding: 1rem 0;
+  margin-top: 6rem;
+  opacity: 0.7;
 }
 
 #data {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-top: 20rem;
-    margin-left: 33rem;
-    font-size: 24px;
-    line-height: 32px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 20rem;
+  margin-left: 33rem;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 hr {
-    width: 100%;
-    margin-left: -2rem;
+  width: 100%;
+  margin-left: -2rem;
 }
 
 #dot {
-    margin-left: 25rem;
-    margin-top: -1rem;
+  margin-left: 25rem;
+  margin-top: -1rem;
+  cursor: pointer;
+}
+
+.fa-trash-alt {
+  position: absolute;
+  margin-left: 22rem;
+  margin-top: -2.5rem;
+  width: 30px;
+  color: rgb(255, 77, 0);
+  cursor: pointer;
+  height: 2px;
 }
 
 #dot hr {
-    display: flex;
-    flex-direction: column;
-    width: 0.1rem;
-    margin-top: -0.6rem;
-    height: 2px;
-    background-color: rgb(132, 135, 138);
+  display: flex;
+  flex-direction: column;
+  width: 0.2rem;
+  margin-top: -0.6rem;
+  height: 2px;
+  background-color: rgb(132, 135, 138);
+  cursor: pointer;
+}
+
+.inst {
+  position: absolute;
+  display: flex;
+  margin-top: 20rem;
+  margin-left: 40rem;
+  width: 15vw;
+  opacity: 0.7;
+  font-size: 17px;
+  font-weight: bolder;
+  color: #e25ef9;
+}
+
+.fa-edit {
+  position: absolute;
+  margin-left: 20rem;
+  margin-top: -2.4rem;
+  opacity: 0.7;
+  font-size: 20px;
+  cursor: pointer;
+  width: 4px;
+  color: blue;
+}
+
+.update-field {
+  height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 20px;
 }
