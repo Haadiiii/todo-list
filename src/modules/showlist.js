@@ -1,4 +1,4 @@
-import { dataa } from "./Elements.js";
+import { dataa, button  } from "./Elements.js";
 
 let task = [];
 
@@ -42,12 +42,35 @@ const showList = () => {
 
     label.addEventListener("contextmenu", (e) => {
       e.preventDefault();
-      label.style.textDecoration = "line-through";
-      checkbox.checked = true;
-      label.style.color = "#d3d3d3";
+
+      if (checkbox.checked === true) {
+        label.style.textDecoration = "none";
+        checkbox.checked = false;
+        label.style.color = "black";
+        task = JSON.parse(localStorage.getItem("str"));
+        task.forEach((el) => {
+          if (el.index === tasks.index) {
+            el.completed = false;
+          }
+          return el;
+        });
+        localStorage.setItem("str", JSON.stringify(task));
+      } else {
+        label.style.textDecoration = "line-through";
+        checkbox.checked = true;
+        label.style.color = "#d3d3d3";
+        task = JSON.parse(localStorage.getItem("str"));
+        task.forEach((el) => {
+          if (el.index === tasks.index) {
+            el.completed = true;
+          }
+          return el;
+        });
+        localStorage.setItem("str", JSON.stringify(task));
+      }
     });
 
-    //  Remove list Function
+    //  Remove list/and Clear ones Function
 
     const removeList = (id) => {
       let str = "";
@@ -113,6 +136,15 @@ const showList = () => {
         const str = "";
         dataa.innerHTML = str;
         showList();
+      }
+    });
+
+    // CLear Completed ones
+
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (checkbox.checked === true) {
+        removeList(tasks.index);
       }
     });
 
