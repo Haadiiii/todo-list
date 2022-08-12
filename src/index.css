@@ -109,17 +109,17 @@ hr {
   font-size: 20px;
 }
 
-#btn{
-    position: absolute;
-    margin-left: 30rem;
-    margin-top: 6.2rem;
+#btn {
+  position: absolute;
+  margin-left: 30rem;
+  margin-top: 6.2rem;
 }
 
-#btn button{
-    padding: 15px 10px;
-    color: #e25ef9;
-    font-size: 17px;
-    font-weight: bolder;
-    background-color: azure;
-    border-color: #e25ef9;
+#btn button {
+  padding: 15px 10px;
+  color: #e25ef9;
+  font-size: 17px;
+  font-weight: bolder;
+  background-color: azure;
+  border-color: #e25ef9;
 }
