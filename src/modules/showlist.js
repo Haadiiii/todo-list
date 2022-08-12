@@ -9,6 +9,9 @@ const showList = () => {
     const taskStr = localStorage.getItem("str");
     task = JSON.parse(taskStr);
   }
+
+  // Creating Elements
+
   task.map((tasks) => {
     const deleteList = document.createElement("i");
     deleteList.className = "fa fa-trash-alt";
@@ -32,15 +35,19 @@ const showList = () => {
     const hr3 = document.createElement("hr");
     const edit = document.createElement("i");
     edit.className = "fa fa-edit";
-    // edit.innerText = "Edit";
     edit.style.display = "none";
     const mHr = document.createElement("hr");
+
+    // Select items
+
     label.addEventListener("contextmenu", (e) => {
       e.preventDefault();
       label.style.textDecoration = "line-through";
       checkbox.checked = true;
       label.style.color = "#d3d3d3";
     });
+
+    //  Remove list Function
 
     const removeList = (id) => {
       let str = "";
@@ -56,17 +63,28 @@ const showList = () => {
       showList();
     };
 
+    // For delete Menu icon function call
+
     deleteList.addEventListener("click", () => {
       removeList(tasks.index);
     });
+
+    // for delete Items function call
+
     label.addEventListener("click", () => {
       removeList(tasks.index);
     });
+
+    // Display Menu
+
     dot.addEventListener("click", () => {
       deleteList.style.display = "block";
       dot.style.display = "none";
       edit.style.display = "block";
     });
+
+    // Edit Elements
+
     edit.addEventListener("click", () => {
       label.style.display = "none";
       checkbox.style.display = "none";
@@ -74,6 +92,8 @@ const showList = () => {
       inputField.style.display = "block";
       inputField.focus();
     });
+
+    // Update Elements
 
     inputField.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
@@ -95,6 +115,8 @@ const showList = () => {
         showList();
       }
     });
+
+    // Show Data
 
     dataa.appendChild(checkbox);
     dataa.appendChild(label);
