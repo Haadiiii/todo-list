@@ -70,6 +70,32 @@ const showList = () => {
       }
     });
 
+    // Checkbox Completed task
+
+    checkbox.addEventListener("click", () => {
+      if (checkbox.checked === true) {
+        checkbox.checked = true;
+        task = JSON.parse(localStorage.getItem("str"));
+        task.forEach((el) => {
+          if (el.index === tasks.index) {
+            el.completed = true;
+          }
+          return el;
+        });
+        localStorage.setItem("str", JSON.stringify(task));
+      } else {
+        checkbox.checked = false;
+        task = JSON.parse(localStorage.getItem("str"));
+        task.forEach((el) => {
+          if (el.index === tasks.index) {
+            el.completed = false;
+          }
+          return el;
+        });
+        localStorage.setItem("str", JSON.stringify(task));
+      }
+    });
+
     //  Remove list/and Clear ones Function
 
     const removeList = (id) => {
