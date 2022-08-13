@@ -6,6 +6,7 @@ import addItems from "./modules/Addlist.js";
 title.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     addItems();
+    title.value = "";
   }
 });
 
