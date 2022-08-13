@@ -2,6 +2,7 @@ import "./index.css";
 import showList from "./modules/showlist.js";
 import { title } from "./modules/Elements.js";
 import addItems from "./modules/Addlist.js";
+import removeSelected from "./modules/clearCompletedTask.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   title.addEventListener("keydown", (e) => {
@@ -9,6 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
       addItems();
       title.value = "";
     }
+  });
+
+  // CLear Completed ones
+
+  button.addEventListener("click", () => {
+    removeSelected();
   });
 
   showList();

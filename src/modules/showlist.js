@@ -112,24 +112,6 @@ const showList = () => {
       showList();
     };
 
-    const removeAll = () => {
-      let str = "";
-      const taskStr = localStorage.getItem("str");
-      task = JSON.parse(taskStr);
-      for(let i = task.length -1; i >= 0; i--){
-        if(task[i].completed === true){
-          task.splice(i, 1);
-        }
-      }
-      task.forEach((el, index) => {
-        el.index = index;
-      });
-      localStorage.setItem("str", JSON.stringify(task));
-      str = "";
-      dataa.innerHTML = str;
-      showList();
-    };
-
     // For delete Menu icon function call
 
     deleteList.addEventListener("click", () => {
@@ -182,15 +164,6 @@ const showList = () => {
         showList();
       }
     });
-
-    // CLear Completed ones
-
-    button.addEventListener("click", (e) => {
-      e.preventDefault();
-        removeAll();
-      
-    });
-
     // Show Data
 
     dataa.appendChild(checkbox);
@@ -208,4 +181,7 @@ const showList = () => {
   });
 };
 
+
+
+ 
 export default showList;
