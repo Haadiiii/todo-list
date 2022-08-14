@@ -96,7 +96,7 @@ const showList = () => {
       }
     });
 
-    //  Remove list/and Clear ones Function
+    //  Remove list Function
 
     const removeList = (id) => {
       let str = "";
@@ -112,12 +112,14 @@ const showList = () => {
       showList();
     };
 
+    //  Clear Button Function
+
     const removeAll = () => {
       let str = "";
       const taskStr = localStorage.getItem("str");
       task = JSON.parse(taskStr);
-      for(let i = task.length -1; i >= 0; i--){
-        if(task[i].completed === true){
+      for (let i = task.length - 1; i >= 0; i--) {
+        if (task[i].completed === true) {
           task.splice(i, 1);
         }
       }
@@ -183,12 +185,11 @@ const showList = () => {
       }
     });
 
-    // CLear Completed ones
+    // CLear Completed  ones button
 
     button.addEventListener("click", (e) => {
       e.preventDefault();
-        removeAll();
-      
+      removeAll();
     });
 
     // Show Data
