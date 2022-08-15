@@ -10,6 +10,9 @@
 - CSS
 - JavaScript
 
+## See Live
+click [here](https://haadiiii.github.io/todo-list/dist/)
+
 ## Authors
 
 👤 **HaaDiiii**
