@@ -23,7 +23,7 @@ module.exports = {
     ],
   },
   devServer: {
-    static: "./dist",
+    static: "./dist/index.html",
   },
   optimization: {
     runtimeChunk: "single",
