@@ -16,11 +16,8 @@ body {
   background-color: white;
   border-radius: 2rem;
   padding-left: 4rem;
-  box-sizing: border-box;
-  box-shadow: 50rem black;
   margin-top: 10rem;
-  width: 100%;
-  padding-top: 0.5rem;
+
 }
 
 .check {
@@ -30,7 +27,7 @@ body {
 
 #title {
   text-align: center;
-  width: 30vw;
+  width: 24vw;
   font-size: 24px;
   padding: 1rem 0;
   margin-top: 6rem;
