@@ -11,7 +11,7 @@
 - JavaScript
 
 ## See Live
-click [here](https://haadiiii.github.io/todo-list/dist/)
+click [here](https://haadii-todos.netlify.app/)
 
 ## Authors
 
