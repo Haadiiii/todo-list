@@ -17,7 +17,7 @@ body {
   border-radius: 2rem;
   padding-left: 4rem;
   margin-top: 10rem;
-
+  margin-left: 1rem;
 }
 
 .check {
@@ -51,7 +51,7 @@ hr {
 }
 
 #dot {
-  margin-left: 25rem;
+  margin-left: 21rem;
   margin-top: -1rem;
   cursor: pointer;
 }
@@ -108,7 +108,7 @@ hr {
 
 #btn {
   position: absolute;
-  margin-left: 30rem;
+  margin-left: -6rem;
   margin-top: 6.2rem;
 }
 
